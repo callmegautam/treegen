@@ -14,7 +14,7 @@ import (
 
 	"github.com/callmegautam/treegen/internal/tree"
 
-	"github.com/callmegautam/treegen/internal/clipboard"
+	clipboardutil "github.com/callmegautam/treegen/internal/clipboard"
 )
 
 var depth int
@@ -32,8 +32,8 @@ var rootCmd = &cobra.Command{
 
 		ignoreMap := tree.DefaultIgnores
 		if ignore != "" {
-			custom := strings.Split(ignore, ",")
-			for _, val := range custom {
+			custom := strings.SplitSeq(ignore, ",")
+			for val := range custom {
 				ignoreMap[strings.TrimSpace(val)] = true
 			}
 		}
@@ -55,7 +55,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		fmt.Printf("Copied to clipboard.\n")
-		fmt.Printf("Generated in %v\n", time.Since(start))
+		fmt.Printf("Generated in %v\n", time.Since(start).Round(time.Millisecond))
 
 		return nil
 	},

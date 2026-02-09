@@ -102,7 +102,17 @@ func buildTree(path string, level int, cfg Config) (*Node, error) {
 	wg.Wait()
 
 	sort.Slice(node.Children, func(i, j int) bool {
-		return node.Children[i].Name < node.Children[j].Name
+		a := node.Children[i]
+		b := node.Children[j]
+
+		if a.IsDir && !b.IsDir {
+			return true
+		}
+		if !a.IsDir && b.IsDir {
+			return false
+		}
+
+		return strings.ToLower(a.Name) < strings.ToLower(b.Name)
 	})
 
 	return node, nil
