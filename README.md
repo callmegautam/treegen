@@ -11,14 +11,10 @@ Fast. Deterministic. Cross-platform.
 ### Using Go
 
 ```bash
-go install github.com/YOUR_USERNAME/treegen@latest
+go install github.com/callmegautam/treegen@latest
 ```
 
 Make sure your `$GOBIN` or `$GOPATH/bin` is in your PATH.
-
-### Using Prebuilt Binary
-
-Download the appropriate binary for your OS from the **Releases** section and place it in a directory included in your PATH.
 
 ---
 
