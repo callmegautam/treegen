@@ -1,0 +1,12 @@
+project_name: treegen
+
+builds:
+  - main: ./main.go
+    binary: treegen
+    goos:
+      - linux
+      - windows
+      - darwin
+
+archives:
+  - format: tar.gz

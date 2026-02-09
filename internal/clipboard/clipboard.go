@@ -2,7 +2,7 @@
 Copyright © 2026 GAUTAM SUTHAR iamgautamsuthar@gmail.com
 */
 
-package utils
+package clipboardutil
 
 import (
 	"github.com/atotto/clipboard"
