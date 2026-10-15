@@ -1,0 +1,54 @@
+name: Bug report
+description: Something treegen did wrong
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: treegen version
+      description: The output of `treegen --version`.
+      placeholder: treegen version v0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS and architecture
+      placeholder: Arch Linux, amd64
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: The command you ran
+      render: console
+      placeholder: $ treegen --gitignore --depth 2 ./src
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Paste the full output, including anything on stderr.
+      render: console
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Input tree, for `treegen new` bugs
+      description: The exact tree you fed it. This is rendered as code, so the whitespace survives.
+      render: text
+    validations:
+      required: false

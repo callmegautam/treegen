@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest something treegen should do
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the situation, not the solution you have in mind.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like treegen to do?
+      description: If it is a new flag, show the command line you would type.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What did you try instead?
+      description: Existing flags, other tools, a shell pipeline.
+    validations:
+      required: false

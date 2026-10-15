@@ -1,7 +1,7 @@
 /*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
-
+Copyright © 2026 GAUTAM SUTHAR iamgautamsuthar@gmail.com
 */
+
 package main
 
 import "github.com/callmegautam/treegen/cmd"
