@@ -11,13 +11,13 @@ Fast. Deterministic. Cross-platform.
 ### Linux and macOS
 
 ```bash
-curl -fsSL https://gautamsuthar.dev/projects/treegen/install | sh
+curl -fsSL https://gautamsuthar.in/projects/treegen/install | sh
 ```
 
 ### Windows (PowerShell)
 
 ```powershell
-irm https://gautamsuthar.dev/projects/treegen/install | iex
+irm https://gautamsuthar.in/projects/treegen/install | iex
 ```
 
 Both scripts detect your OS and architecture, download the matching release archive, verify it against `checksums.txt`, and drop a single static binary on your PATH. No Go toolchain needed.
@@ -27,7 +27,7 @@ That URL serves the shell script by default and the PowerShell one when PowerShe
 The shell script honours two environment variables:
 
 ```bash
-curl -fsSL https://gautamsuthar.dev/projects/treegen/install -o install.sh
+curl -fsSL https://gautamsuthar.in/projects/treegen/install -o install.sh
 VERSION=v0.1.0 INSTALL_DIR=~/bin sh install.sh
 ```
 
